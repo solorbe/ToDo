@@ -1,0 +1,88 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Montserrat", serif;;
+}
+
+body{
+    background: url(/imagenes/fondo.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    max-width: 800px;
+    min-height: 400px;
+    justify-content: space-between;
+    background-color: rgb(245, 238, 232);
+    margin: 20px;
+    padding: 10px;
+}
+
+h1{
+    margin: 20px;
+    padding: 10px;   
+}
+
+.contenedorInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+#nuevaTarea{
+     border: none;
+     width: 80%;
+ 
+}
+button{
+    margin: 10px 115px 50px 115px;
+
+}
+
+#listaTareas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tarea{
+    background-color: rgb(200, 147, 114) ;
+    color: white;
+    border: 2px solid rgb(8, 58, 71);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px  ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tarea p{
+    margin: 0;
+    max-width: 150px;
+}
+
+.completar{
+    color: green;
+}
+
+.completada{
+    text-decoration: line-through;
+    background-color: black;
+}
+
+.eliminar{
+    color: white;
+}
+
+i{
+    margin: 5px;
+}
