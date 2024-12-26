@@ -18,11 +18,17 @@ function agregarTarea() {
         let iconos = document.createElement('div');
         iconos.classList.add('iconos');
         tareaNueva.appendChild(iconos);
-    
+           
         let completar = document.createElement('i');
         completar.classList.add('completar', 'bi', 'bi-check-circle-fill');
         iconos.append(completar);
         completar.addEventListener('click', completarTarea);
+
+        let editar = document.createElement('i');
+        editar.classList.add('bi', 'bi-pencil-fill');
+        iconos.append(editar);
+        editar.addEventListener('click', editarTarea);
+       
 
         let eliminar = document.createElement('i');
         eliminar.classList.add('eliminar', 'bi', 'bi-trash3-fill');
@@ -55,3 +61,31 @@ input.addEventListener('keydown', (e) => {
         agregarTarea();
     }
 })
+
+function editarTarea(e) {
+    let tarea = e.target.parentNode.parentNode;
+   
+ 
+    //abrir modal
+    const modal = document.getElementById('modal');
+    const input = document.getElementById('textoEditar');
+    const confirmar = document.getElementById('botonEditar');
+    const cancelar = document.getElementById('botonCancelar');
+
+    input.value = tarea.children[0].innerText;
+    modal.style.display = 'flex';
+
+    confirmar.addEventListener('click', confirmarFunction);
+    cancelar.addEventListener('click', cancelarFunction);
+
+    function confirmarFunction() {
+        console.log("confirmar");
+        tarea.children[0].innerText = input.value;
+        modal.style.display = 'none';
+    } 
+    function cancelarFunction() {
+        modal.style.display = 'none';
+    }
+}
+
+ 

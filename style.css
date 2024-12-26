@@ -86,3 +86,43 @@ button{
 i{
     margin: 5px;
 }
+
+/* modal */
+.fondoModal{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#contenedorModal{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#textoEditar{
+    margin: 0 0 20px 0;
+    width: 90%;
+
+
+}
+
+.contenedorBotones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedorBotones button{
+    margin:0 5px 0 5px;
+}
